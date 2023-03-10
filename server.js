@@ -2,10 +2,13 @@ const auth = require("json-server-auth");
 const jsonServer = require("json-server");
 const express = require('express');
 const http = require("http");
+import cors from 'cors';
 
 const app = express();
 const server = http.createServer(app);
 const io = require("socket.io")(server);
+
+app.use(cors());
 
 global.io = io;
 
