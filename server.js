@@ -6,7 +6,11 @@ const cors =  require ('cors');
 
 const app = express();
 const server = http.createServer(app);
-const io = require("socket.io")(server,{cors: {origin: "*"}});
+const io = require("socket.io")(server,{
+    cors: {
+        origin: "https://silly-gumdrop-c2f3e8.netlify.app",
+    }
+});
 
 app.use(cors());
 
